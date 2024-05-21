@@ -1,7 +1,7 @@
 <template>
   <div class="todo-page">
-    <h1>{{ userName }}</h1>
-    <button @click="goBack">Back to Users</button>
+    <h1 class="todo-page__title">{{ userName }}</h1>
+    <button class="todo-page__button" @click="goBack">Back to Users</button>
     <TodoList :todos="todos" />
   </div>
 </template>
@@ -54,23 +54,23 @@ onMounted(async () => {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: $white-color;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: $box-shadow;
   text-align: center;
 
-  h1 {
+  &__title {
     margin-bottom: 1rem;
     font-size: $font-size-large;
   }
 
-  button {
+  &__button {
     margin-bottom: 1rem;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
     background-color: $primary-color;
-    color: $white-color;
+    color: #fff;
     cursor: pointer;
     font-size: $font-size-base;
 
